@@ -7,9 +7,11 @@ export interface Candidate {
   content: string;
 }
 
+export type ArmId = string;
+
 export interface Trial {
   query: string;
-  arm: "original" | "optimized";
+  arm: ArmId;
   won: boolean;
   rank: number;
   total: number;
@@ -40,7 +42,7 @@ const TARGET_ID = "L-04";
 
 export async function runTrial(
   query: string,
-  arm: "original" | "optimized",
+  arm: ArmId,
   targetContent: string,
   competitors: { title: string; content: string }[],
 ): Promise<Trial> {
@@ -106,3 +108,56 @@ export async function pooled<T, R>(
   await Promise.all(workers);
   return results;
 }
+
+/* ------------------------------------------------------------- METRICS */
+
+/**
+ * Rank-based IR metrics rather than raw win-rate. On a five-way race a single
+ * "was it picked" bit throws away most of the signal — a listing moving from
+ * 4th to 2nd is a real commercial gain that win-rate scores as zero.
+ *
+ * Reciprocal rank is the natural fit here: there is exactly one target per
+ * query, so MRR is the standard measure. nDCG is deliberately NOT computed on
+ * this stage — it needs graded relevance labels, which only exist in shopper
+ * mode where an independent judge grades the whole catalogue.
+ */
+export interface ArmStat {
+  arm: ArmId;
+  label: string;
+  wins: number;
+  topThree: number;
+  total: number;
+  meanRank: number;
+  mrr: number;
+  recallAt3: number;
+  meanWords: number;
+}
+
+export function armStats(
+  trials: Trial[],
+  arm: ArmId,
+  label: string,
+  words: number,
+): ArmStat {
+  const rows = trials.filter((t) => t.arm === arm);
+  const n = rows.length || 1;
+  const mean = (f: (t: Trial) => number) =>
+    rows.reduce((s, t) => s + f(t), 0) / n;
+
+  return {
+    arm,
+    label,
+    wins: rows.filter((t) => t.won).length,
+    topThree: rows.filter((t) => t.rank <= 3).length,
+    total: rows.length,
+    meanRank: round(mean((t) => t.rank)),
+    mrr: round(mean((t) => 1 / t.rank), 3),
+    recallAt3: round(rows.filter((t) => t.rank <= 3).length / n, 3),
+    meanWords: words,
+  };
+}
+
+const round = (n: number, dp = 2) => Number(n.toFixed(dp));
+
+export const wordCount = (s: string) =>
+  s.trim().split(/\s+/).filter(Boolean).length;

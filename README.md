@@ -1,6 +1,8 @@
-# Agent-Ready Commerce Copilot
+# AgentRank
 
-**LifeHack NUS — Rezolve AI track**
+**Your product ranks #1 on Google. Where does it rank with an agent?**
+
+*LifeHack NUS — Rezolve AI track*
 
 Brands write product content for humans who browse. Shoppers increasingly ask
 AI agents constrained, intent-rich questions — *"lightweight shoes for a humid
@@ -61,7 +63,7 @@ product before the softer signals matter.
 
 ### 2. Optimize — rewrite from the same underlying facts
 
-The Copilot restructures the listing to raise it on those axes, plus 2–3
+AgentRank restructures the listing to raise it on those axes, plus 2–3
 persona variants that reframe the same attributes toward different intents.
 
 Two rules make the output safe for a brand to actually ship:

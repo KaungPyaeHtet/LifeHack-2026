@@ -153,301 +153,6 @@
    }
   ]
  },
- "bank": {
-  "category": "running shoes",
-  "queries": [
-   "best running shoe under s$200 for daily 5k and some weekend 10k",
-   "light running shoes around 240g with decent cushioning not super squishy",
-   "i need a road running shoe for hot humid singapore weather breathable upper pls",
-   "which running shoe is lighter but still durable enough for 600 to 700km",
-   "good beginner running shoes for training for a half marathon on pavement",
-   "mens uk 11 running shoes under s$180 for treadmill and outdoor road runs",
-   "womens uk 5 road running shoe that's lightweight and not too aggressive",
-   "daily trainer with 8mm drop for heel striker is that a good option",
-   "running shoes with breathable mesh upper and rubber outsole for city runs",
-   "i want one pair for gym treadmill easy runs and occasional tempo can this work",
-   "what's a good lightweight road shoe for someone moving up from casual sneakers",
-   "which is better for me a lightweight trainer or max cushion shoe for sore knees"
-  ],
-  "competitors": [
-   {
-    "title": "Strider Northline Daily 2",
-    "content": "Road running shoe for daily training, easy runs, and first half-marathon plans. Weight 245g (US men's 9), 8mm drop, stack 32mm heel / 24mm forefoot. Dual-density EVA/TPU blend midsole tuned for balanced cushioning rather than max softness. Engineered jacquard mesh upper with reinforced midfoot hold; better for normal to slightly wide feet than narrow racing fits. Full-contact rubber outsole with lab-tested durability to 800km and reliable wet-pavement grip. Available in men's UK 6-12 and women's UK 3-8. Price: S$189. Honest trade-off: versatile and stable, but not the snappiest option for interval days."
-   },
-   {
-    "title": "Nimbus Lane SwiftFlow 1",
-    "content": "Lightweight road trainer aimed at runners who want one shoe for treadmill sessions, daily 5-10km runs, and occasional tempo work. Weight 228g (men's sample), 6mm drop, stack 30/24mm. Supercritical EVA midsole gives a quicker toe-off than standard EVA while staying approachable for beginners. Monofilament mesh upper is highly breathable for hot, humid climates. Rubber coverage placed only in high-wear zones to keep weight low; expected outsole life 500-600km. Fits true to size with a medium forefoot. Men's UK 5-13, women's UK 3-9. Price: S$199. Honest trade-off: livelier ride and lower weight, but less outsole rubber and less long-haul durability than heavier trainers."
-   },
-   {
-    "title": "Harbor Run Coastline Max",
-    "content": "Cushioned daily trainer for runners prioritizing comfort over speed, especially for recovery runs, walking, and heavier runners building mileage. Weight 276g, 10mm drop, stack 38/28mm. Compression-molded EVA midsole with rocker geometry to smooth heel-to-toe transitions. Double-layer mesh upper with padded heel collar improves step-in comfort but runs warmer in tropical weather. Carbon-rubber outsole offers strong durability to around 900km. Men's UK 6-13, women's UK 4-9. Price: S$169. Honest trade-off: excellent comfort and durability for the price, but noticeably heavier and less agile for faster 5k work."
-   },
-   {
-    "title": "Vertex Relay Tempo Daily",
-    "content": "Versatile performance trainer for runners who split time between steady road mileage and uptempo sessions. Weight 232g, 8mm drop, stack 34/26mm. PEBA-infused foam midsole feels more energetic than basic EVA, with a firmer platform that suits runners who dislike mushy max-cushion shoes. Open-knit upper designed for humid-weather ventilation; gusseted tongue improves lockdown for faster efforts. Durable rubber outsole rated for 650km with textured forefoot grip for damp roads. Men's UK 5-12, women's UK 3-9. Price: S$229. Honest trade-off: more responsive and workout-friendly than budget trainers, but above the S$200 cap and firmer underfoot for easy-day runners."
-   }
-  ]
- },
- "trials": [
-  {
-   "query": "light running shoes around 240g with decent cushioning not super squishy",
-   "arm": "optimized",
-   "won": true,
-   "rank": 1,
-   "total": 5,
-   "reasoning": "L-04 is the closest overall match because it’s explicitly lightweight at 238 g and describes a moderate, performance-oriented cushioning that should avoid the super-squishy feel the shopper doesn’t want. L-10 is also close at 245 g with balanced cushioning, but it misses the target weight a bit more and sounds slightly more general-purpose rather than clearly light and direct.",
-   "confidence": 0.91
-  },
-  {
-   "query": "best running shoe under s$200 for daily 5k and some weekend 10k",
-   "arm": "optimized",
-   "won": false,
-   "rank": 3,
-   "total": 5,
-   "reasoning": "L-11 is the best direct fit because it explicitly targets daily 5-10km runs and occasional tempo work, while staying just under the S$200 cap at S$199. L-10 is a strong runner-up at S$189, but it’s described as less snappy for interval days and less specifically matched to the shopper’s 5k-plus-weekend 10k use case than L-11.",
-   "confidence": 0.9
-  },
-  {
-   "query": "i need a road running shoe for hot humid singapore weather breathable upper pls",
-   "arm": "optimized",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-11 is the clearest match because it explicitly says the monofilament mesh upper is highly breathable for hot, humid climates, which directly answers the shopper’s Singapore-weather requirement. L-04 is also a solid road shoe with mesh, but it does not specifically claim hot-humid breathability, while the others are either less explicit or note warmer uppers/other trade-offs.",
-   "confidence": 0.93
-  },
-  {
-   "query": "best running shoe under s$200 for daily 5k and some weekend 10k",
-   "arm": "original",
-   "won": false,
-   "rank": 3,
-   "total": 5,
-   "reasoning": "L-11 is the best fit because it is explicitly aimed at daily 5-10km runs and occasional tempo work, stays within the S$200 cap at S$199, and is light enough for a 5k/10k running mix. L-10 is also within budget and versatile, but it’s described as less snappy for interval work, while L-11 better matches the “daily 5k and some weekend 10k” use case.",
-   "confidence": 0.9
-  },
-  {
-   "query": "i need a road running shoe for hot humid singapore weather breathable upper pls",
-   "arm": "original",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-11 best matches the hot, humid Singapore requirement because it explicitly says its monofilament mesh upper is highly breathable for hot, humid climates, while still being a road trainer. L-04 is a decent runner-up with an engineered/open-weave upper, but it does not explicitly tie the breathability to humid weather like L-11 does.",
-   "confidence": 0.95
-  },
-  {
-   "query": "light running shoes around 240g with decent cushioning not super squishy",
-   "arm": "original",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-11 is the closest overall match: at 228g it is in the requested light-running range and it explicitly aims for a quicker, not mushy ride with some cushioning. L-04 is also light at 238g, but it gives less evidence about cushioning feel, while the others are heavier or more likely to feel either too soft or too firm based on their descriptions.",
-   "confidence": 0.81
-  },
-  {
-   "query": "which running shoe is lighter but still durable enough for 600 to 700km",
-   "arm": "optimized",
-   "won": true,
-   "rank": 1,
-   "total": 5,
-   "reasoning": "L-04 is the best fit because it is explicitly lightweight at 238 g and its outsole is rated to 700 km, which lands right in the shopper’s 600–700 km durability target. L-13 is also close, but it is a bit heavier and only rated to 650 km, while L-10 and L-12 are heavier and L-11 falls short on durability at 500–600 km.",
-   "confidence": 0.95
-  },
-  {
-   "query": "good beginner running shoes for training for a half marathon on pavement",
-   "arm": "original",
-   "won": false,
-   "rank": 3,
-   "total": 5,
-   "reasoning": "L-10 is the clearest match because it explicitly says it is for daily training, easy runs, and first half-marathon plans, with balanced cushioning and wet-pavement grip that suit pavement mileage. L-11 is also beginner-friendly and road-oriented, but it emphasizes shorter runs and lower durability, while L-10 better matches half-marathon training on pavement.",
-   "confidence": 0.95
-  },
-  {
-   "query": "good beginner running shoes for training for a half marathon on pavement",
-   "arm": "optimized",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-10 is the most directly aligned with the shopper’s request: it explicitly says it is a road running shoe for daily training and first half-marathon plans, with reliable wet-pavement grip and durability for long training. L-04 is a solid runner-up for pavement training, but it’s framed more as a lighter performance trainer for faster sessions and doesn’t mention half-marathon plans as clearly as L-10.",
-   "confidence": 0.96
-  },
-  {
-   "query": "which running shoe is lighter but still durable enough for 600 to 700km",
-   "arm": "original",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-13 is the best fit because it is the lightest listing that still explicitly promises durability in the needed range, with a 232g weight and a 650km outsole rating. L-04 is also light and durable at 238g and 700km, but L-13 edges it out on weight while still staying within the 600–700km target.",
-   "confidence": 0.91
-  },
-  {
-   "query": "mens uk 11 running shoes under s$180 for treadmill and outdoor road runs",
-   "arm": "original",
-   "won": true,
-   "rank": 1,
-   "total": 5,
-   "reasoning": "L-04 is the only option that clearly fits the shopper’s UK 11 size and stays under the S$180 budget while still being a running shoe suitable for road use. L-10 is close for road running but misses the budget, and the other options either miss the price cap more badly or don’t fit UK 11.",
-   "confidence": 0.96
-  },
-  {
-   "query": "mens uk 11 running shoes under s$180 for treadmill and outdoor road runs",
-   "arm": "optimized",
-   "won": true,
-   "rank": 1,
-   "total": 5,
-   "reasoning": "L-04 best matches the shopper’s constraints because it explicitly supports road and treadmill running, is priced under S$180, and includes men's UK sizes up to 13 so UK 11 is covered. L-10 is also a strong fit, but it misses the budget by S$9, while the others either cost more or are less directly suited to the requested use. ",
-   "confidence": 0.97
-  },
-  {
-   "query": "womens uk 5 road running shoe that's lightweight and not too aggressive",
-   "arm": "original",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-11 is the clearest match because it is explicitly a lightweight road trainer and its size range includes women’s UK 5, while its ride is described as approachable rather than aggressive. L-04 is also a road shoe in the right size range, but it is framed as more performance-oriented and less directly lightweight/forgiving than L-11.",
-   "confidence": 0.91
-  },
-  {
-   "query": "womens uk 5 road running shoe that's lightweight and not too aggressive",
-   "arm": "optimized",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-11 is the best match because it explicitly says it is lightweight, made for road running, and aimed at everyday runs with only occasional tempo work, which fits “not too aggressive” better than the sharper performance-oriented options. L-04 is also lightweight and road-focused, but it leans more toward faster sessions and a firmer, performance-oriented feel, making it a bit more aggressive than L-11.",
-   "confidence": 0.88
-  },
-  {
-   "query": "running shoes with breathable mesh upper and rubber outsole for city runs",
-   "arm": "original",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-11 best matches the request because it explicitly says the upper is highly breathable mesh and it has rubber coverage on the outsole, while also being a road trainer suited to runs. L-04 is close with engineered mesh and a rubber outsole, but it says less about breathability than L-11 and is less specific about city-run suitability. ",
-   "confidence": 0.93
-  },
-  {
-   "query": "daily trainer with 8mm drop for heel striker is that a good option",
-   "arm": "optimized",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-10 best matches the shopper’s stated need because it is explicitly a daily trainer with an 8mm drop, making it directly suitable for the heel-striker question. L-04 also has an 8mm drop and daily-trainer positioning, but L-10 adds more cushioning and stability-oriented details that make it the safer “good option” for this use case, while L-13 and L-11 are more performance-leaning or lower-drop, and L-12 is 10mm drop.",
-   "confidence": 0.93
-  },
-  {
-   "query": "daily trainer with 8mm drop for heel striker is that a good option",
-   "arm": "original",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-10 is the cleanest match because it explicitly says it is a daily training road shoe with an 8mm drop and stable, balanced cushioning, which fits a heel striker well. L-04 also has an 8mm drop, but it gives less evidence about daily-training stability and heel-strike suitability than L-10, while the others miss the drop target or lean more toward speed, max comfort, or lighter/less durable builds.",
-   "confidence": 0.91
-  },
-  {
-   "query": "running shoes with breathable mesh upper and rubber outsole for city runs",
-   "arm": "optimized",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-11 is the best match because it explicitly has a highly breathable mesh upper and rubber outsole, and it’s aimed at road running and daily 5–10km runs that fit city use. L-04 is close, but L-11 states breathability more directly, while the other options either don’t emphasize breathable mesh as clearly or are less clearly suited to city runs.",
-   "confidence": 0.88
-  },
-  {
-   "query": "i want one pair for gym treadmill easy runs and occasional tempo can this work",
-   "arm": "original",
-   "won": false,
-   "rank": 4,
-   "total": 5,
-   "reasoning": "L-11 directly says it is aimed at treadmill sessions, daily runs, and occasional tempo work, which matches the shopper’s exact use case best. L-13 is also a workout-friendly tempo trainer, but it is explicitly above the S$200 cap and says it is firmer than ideal for easy-day running, so it fits the request less well.",
-   "confidence": 0.95
-  },
-  {
-   "query": "i want one pair for gym treadmill easy runs and occasional tempo can this work",
-   "arm": "optimized",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-11 most directly matches the shopper’s use case by explicitly saying it is aimed at treadmill sessions with occasional tempo work, while still being lightweight and road-capable. L-04 is also a good fit, but L-11 is the closer wording match for treadmill + tempo, whereas L-13 is firmer and more expensive and L-10/L-12 are less snap-oriented.",
-   "confidence": 0.93
-  },
-  {
-   "query": "what's a good lightweight road shoe for someone moving up from casual sneakers",
-   "arm": "optimized",
-   "won": false,
-   "rank": 2,
-   "total": 5,
-   "reasoning": "L-11 is the clearest match for someone moving up from casual sneakers because it explicitly says it’s approachable for beginners and keeps the weight low while still being a road trainer. L-04 is also lightweight and road-focused, but L-11 gives the stronger beginner-friendly framing and simpler all-around fit for a first step up.",
-   "confidence": 0.89
-  },
-  {
-   "query": "what's a good lightweight road shoe for someone moving up from casual sneakers",
-   "arm": "original",
-   "won": false,
-   "rank": 3,
-   "total": 5,
-   "reasoning": "L-11 is the clearest lightweight road shoe and explicitly says it’s approachable for beginners, which fits someone moving up from casual sneakers. L-10 is a solid second choice for daily road use, but it’s heavier and more general-purpose rather than specifically lightweight and beginner-friendly.",
-   "confidence": 0.95
-  },
-  {
-   "query": "which is better for me a lightweight trainer or max cushion shoe for sore knees",
-   "arm": "original",
-   "won": false,
-   "rank": 4,
-   "total": 5,
-   "reasoning": "For sore knees, the max-cushion option is the best match because it explicitly prioritizes comfort and has the highest stack, making it the closest fit to the shopper’s concern. L-10 is also cushioned but says it is balanced rather than max soft, while the lighter trainers are more performance-leaning and less directly suited to knee comfort.",
-   "confidence": 0.92
-  },
-  {
-   "query": "which is better for me a lightweight trainer or max cushion shoe for sore knees",
-   "arm": "optimized",
-   "won": false,
-   "rank": 3,
-   "total": 5,
-   "reasoning": "L-12 is the most directly aligned with sore knees because it explicitly prioritizes comfort, recovery runs, and heavier cushioning over speed, which fits the need for impact softness. L-11 is lighter and faster, but it is the opposite direction of max cushion, so it’s the weaker choice for knee soreness; L-13 is also described as firmer and less ideal for people who dislike mushy max-cushion shoes.",
-   "confidence": 0.91
-  }
- ],
- "summary": {
-  "original": {
-   "wins": 1,
-   "topThree": 10,
-   "total": 12,
-   "meanRank": 2.5
-  },
-  "optimized": {
-   "wins": 3,
-   "topThree": 12,
-   "total": 12,
-   "meanRank": 1.92
-  },
-  "flips": [
-   {
-    "query": "light running shoes around 240g with decent cushioning not super squishy",
-    "optimizedReasoning": "L-04 is the closest overall match because it’s explicitly lightweight at 238 g and describes a moderate, performance-oriented cushioning that should avoid the super-squishy feel the shopper doesn’t want. L-10 is also close at 245 g with balanced cushioning, but it misses the target weight a bit more and sounds slightly more general-purpose rather than clearly light and direct.",
-    "original": {
-     "query": "light running shoes around 240g with decent cushioning not super squishy",
-     "arm": "original",
-     "won": false,
-     "rank": 2,
-     "total": 5,
-     "reasoning": "L-11 is the closest overall match: at 228g it is in the requested light-running range and it explicitly aims for a quicker, not mushy ride with some cushioning. L-04 is also light at 238g, but it gives less evidence about cushioning feel, while the others are heavier or more likely to feel either too soft or too firm based on their descriptions.",
-     "confidence": 0.81
-    }
-   },
-   {
-    "query": "which running shoe is lighter but still durable enough for 600 to 700km",
-    "optimizedReasoning": "L-04 is the best fit because it is explicitly lightweight at 238 g and its outsole is rated to 700 km, which lands right in the shopper’s 600–700 km durability target. L-13 is also close, but it is a bit heavier and only rated to 650 km, while L-10 and L-12 are heavier and L-11 falls short on durability at 500–600 km.",
-    "original": {
-     "query": "which running shoe is lighter but still durable enough for 600 to 700km",
-     "arm": "original",
-     "won": false,
-     "rank": 2,
-     "total": 5,
-     "reasoning": "L-13 is the best fit because it is the lightest listing that still explicitly promises durability in the needed range, with a 232g weight and a 650km outsole rating. L-04 is also light and durable at 238g and 700km, but L-13 edges it out on weight while still staying within the 600–700km target.",
-     "confidence": 0.91
-    }
-   }
-  ]
- },
  "afterScore": {
   "category": "running shoe",
   "dimensions": [
@@ -490,5 +195,462 @@
   ],
   "summary": "An agent can make a fairly confident recommendation or rejection for shoppers asking about a lightweight neutral road trainer for daily runs, tempo work, treadmill use, price, drop, and basic sizing. It still cannot confidently answer fit, width, support confirmation, stack/cushion specifics, return protection, or verify the durability claim without stronger source evidence.",
   "overall": 79
+ },
+ "bank": {
+  "category": "running shoes",
+  "queries": [
+   "best running shoe under s$200 for daily 5k and some weekend 10k",
+   "light running shoes around 240g with decent cushioning not super squishy",
+   "i need a road running shoe for hot humid singapore weather breathable upper pls",
+   "which running shoe is lighter but still durable enough for 600 to 700km",
+   "good beginner running shoes for training for a half marathon on pavement",
+   "mens uk 11 running shoes under s$180 for treadmill and outdoor road runs",
+   "womens uk 5 road running shoe that's lightweight and not too aggressive",
+   "daily trainer with 8mm drop for heel striker is that a good option",
+   "running shoes with breathable mesh upper and rubber outsole for city runs",
+   "i want one pair for gym treadmill easy runs and occasional tempo can this work",
+   "what's a good lightweight road shoe for someone moving up from casual sneakers",
+   "which is better for me a lightweight trainer or max cushion shoe for sore knees"
+  ],
+  "competitors": [
+   {
+    "title": "Strider Northline Daily 2",
+    "content": "Road running shoe for daily training, easy runs, and first half-marathon plans. Weight 245g (US men's 9), 8mm drop, stack 32mm heel / 24mm forefoot. Dual-density EVA/TPU blend midsole tuned for balanced cushioning rather than max softness. Engineered jacquard mesh upper with reinforced midfoot hold; better for normal to slightly wide feet than narrow racing fits. Full-contact rubber outsole with lab-tested durability to 800km and reliable wet-pavement grip. Available in men's UK 6-12 and women's UK 3-8. Price: S$189. Honest trade-off: versatile and stable, but not the snappiest option for interval days."
+   },
+   {
+    "title": "Nimbus Lane SwiftFlow 1",
+    "content": "Lightweight road trainer aimed at runners who want one shoe for treadmill sessions, daily 5-10km runs, and occasional tempo work. Weight 228g (men's sample), 6mm drop, stack 30/24mm. Supercritical EVA midsole gives a quicker toe-off than standard EVA while staying approachable for beginners. Monofilament mesh upper is highly breathable for hot, humid climates. Rubber coverage placed only in high-wear zones to keep weight low; expected outsole life 500-600km. Fits true to size with a medium forefoot. Men's UK 5-13, women's UK 3-9. Price: S$199. Honest trade-off: livelier ride and lower weight, but less outsole rubber and less long-haul durability than heavier trainers."
+   },
+   {
+    "title": "Harbor Run Coastline Max",
+    "content": "Cushioned daily trainer for runners prioritizing comfort over speed, especially for recovery runs, walking, and heavier runners building mileage. Weight 276g, 10mm drop, stack 38/28mm. Compression-molded EVA midsole with rocker geometry to smooth heel-to-toe transitions. Double-layer mesh upper with padded heel collar improves step-in comfort but runs warmer in tropical weather. Carbon-rubber outsole offers strong durability to around 900km. Men's UK 6-13, women's UK 4-9. Price: S$169. Honest trade-off: excellent comfort and durability for the price, but noticeably heavier and less agile for faster 5k work."
+   },
+   {
+    "title": "Vertex Relay Tempo Daily",
+    "content": "Versatile performance trainer for runners who split time between steady road mileage and uptempo sessions. Weight 232g, 8mm drop, stack 34/26mm. PEBA-infused foam midsole feels more energetic than basic EVA, with a firmer platform that suits runners who dislike mushy max-cushion shoes. Open-knit upper designed for humid-weather ventilation; gusseted tongue improves lockdown for faster efforts. Durable rubber outsole rated for 650km with textured forefoot grip for damp roads. Men's UK 5-12, women's UK 3-9. Price: S$229. Honest trade-off: more responsive and workout-friendly than budget trainers, but above the S$200 cap and firmer underfoot for easy-day runners."
+   }
+  ]
+ },
+ "bloated": "Push your limits with the Aerolite Pace 3 Running Shoe and step into a feel that is made to keep you moving with confidence. Designed to bring together performance and lasting wear, the Aerolite Pace 3 delivers the responsive ride you have been waiting for, helping every stride feel smoother, lighter, and more dialed in from the moment you lace up. It is a running shoe created to feel fast, capable, and ready, with a look and feel that stays focused on what matters most: performance that you can feel from the very first stride.\n\nAt the upper, the engineered mesh design gives the shoe a clean, streamlined character while supporting the overall performance-first build of the Aerolite Pace 3. The upper was reworked this season, bringing a refreshed feel to the open-weave construction that defines this model. That open-weave upper adds to the distinct identity of the shoe, creating a design that looks modern and purposeful while staying true to the lightweight, responsive spirit of the Pace 3. Every detail comes together to create a shoe that feels considered, refined, and ready to go.\n\nUnderfoot, the EVA midsole works with the rubber outsole to create the responsive ride that sets the Aerolite Pace 3 apart. At 238g with an 8mm drop, it is built to deliver the kind of feel runners notice immediately, combining a quick, energized sensation with a smooth and balanced platform. The result is a ride that feels responsive from the start and continues to deliver that distinctive sensation step after step. It is the kind of underfoot experience that makes the difference clear right away, with a feel that is tuned for performance and made to keep pace with you.\n\nDurability is part of the story too. The outsole compound is rated to 700km, reinforcing the lasting quality built into the Aerolite Pace 3. Engineered for performance and built to last, this is a shoe that brings together the lively feel of a responsive ride with the reassurance of dependable construction. That blend of performance and durability gives the shoe a strong, confident character, making every element feel intentional and well resolved.\n\nThe Aerolite Pace 3 Running Shoe is available in black, white, and blue, offering a selection of clean, versatile colour options. Sizing is available in UK 5-13 for men's and UK 3-9 for women's, making it easy to find your fit within the Pace 3 lineup. Priced at S$179, it brings together the design, feel, and performance details that define this model in one complete package.\n\nFrom the reworked open-weave upper to the responsive combination of EVA midsole and rubber outsole, every part of the Aerolite Pace 3 comes back to the same promise: performance you can feel and durability you can trust. Push your limits, enjoy the responsive ride you have been waiting for, and feel the difference from your very first stride with the Aerolite Pace 3.",
+ "arms": [
+  {
+   "id": "raw",
+   "label": "Raw catalogue",
+   "content": "Aerolite Pace 3 Running Shoe\n\n- Engineered mesh upper\n- EVA midsole with rubber outsole\n- Available in black, white, blue\n- UK 5-13 (men's), UK 3-9 (women's)\n- S$179\n\nPush your limits with the Aerolite Pace 3. Weighing 238g with an 8mm drop, it delivers the responsive ride you have been waiting for. The open-weave upper was reworked this season and the outsole compound is rated to 700km. Engineered for performance and built to last. Feel the difference from your very first stride."
+  },
+  {
+   "id": "bloat",
+   "label": "Bloat control",
+   "content": "Aerolite Pace 3 Running Shoe\n\nPush your limits with the Aerolite Pace 3 Running Shoe and step into a feel that is made to keep you moving with confidence. Designed to bring together performance and lasting wear, the Aerolite Pace 3 delivers the responsive ride you have been waiting for, helping every stride feel smoother, lighter, and more dialed in from the moment you lace up. It is a running shoe created to feel fast, capable, and ready, with a look and feel that stays focused on what matters most: performance that you can feel from the very first stride.\n\nAt the upper, the engineered mesh design gives the shoe a clean, streamlined character while supporting the overall performance-first build of the Aerolite Pace 3. The upper was reworked this season, bringing a refreshed feel to the open-weave construction that defines this model. That open-weave upper adds to the distinct identity of the shoe, creating a design that looks modern and purposeful while staying true to the lightweight, responsive spirit of the Pace 3. Every detail comes together to create a shoe that feels considered, refined, and ready to go.\n\nUnderfoot, the EVA midsole works with the rubber outsole to create the responsive ride that sets the Aerolite Pace 3 apart. At 238g with an 8mm drop, it is built to deliver the kind of feel runners notice immediately, combining a quick, energized sensation with a smooth and balanced platform. The result is a ride that feels responsive from the start and continues to deliver that distinctive sensation step after step. It is the kind of underfoot experience that makes the difference clear right away, with a feel that is tuned for performance and made to keep pace with you.\n\nDurability is part of the story too. The outsole compound is rated to 700km, reinforcing the lasting quality built into the Aerolite Pace 3. Engineered for performance and built to last, this is a shoe that brings together the lively feel of a responsive ride with the reassurance of dependable construction. That blend of performance and durability gives the shoe a strong, confident character, making every element feel intentional and well resolved.\n\nThe Aerolite Pace 3 Running Shoe is available in black, white, and blue, offering a selection of clean, versatile colour options. Sizing is available in UK 5-13 for men's and UK 3-9 for women's, making it easy to find your fit within the Pace 3 lineup. Priced at S$179, it brings together the design, feel, and performance details that define this model in one complete package.\n\nFrom the reworked open-weave upper to the responsive combination of EVA midsole and rubber outsole, every part of the Aerolite Pace 3 comes back to the same promise: performance you can feel and durability you can trust. Push your limits, enjoy the responsive ride you have been waiting for, and feel the difference from your very first stride with the Aerolite Pace 3."
+  },
+  {
+   "id": "optimized",
+   "label": "AgentRank",
+   "content": "Aerolite Pace 3 Running Shoe\n\n## Overview\nAerolite Pace 3 is a lightweight road running shoe for runners who want a neutral daily trainer that can also handle faster sessions. Based on the provided specs, it uses an engineered mesh upper, an EVA midsole, and a rubber outsole. The listed weight is **238 g** with an **8 mm drop**. The outsole compound is stated as **rated to 700 km**.\n\n## Best for\n- Road running and pavement use\n- Daily training for runners who prefer a lighter shoe\n- Tempo runs and steady-paced workouts\n- Treadmill running\n- Short to mid-distance runs where a lighter, firmer-feeling trainer is preferred\n\n## Not for\n- Trail running or mixed-terrain routes that need aggressive grip\n- Runners specifically seeking max-cushion comfort for recovery days or very long easy miles\n- Buyers who need stability features or motion-control support\n- Shoppers who need wide-fit options unless confirmed separately\n\n## Key attributes\n- **Price:** S$179\n- **Weight:** 238 g [size basis: confirm]\n- **Heel-to-toe drop:** 8 mm\n- **Support type:** Neutral [confirm]\n- **Cushioning level:** Moderate / performance-oriented [confirm]\n- **Upper material:** Engineered mesh\n- **Midsole material:** EVA\n- **Outsole material:** Rubber\n- **Outsole durability claim:** rated to 700 km [test method: confirm]\n- **Surface compatibility:** Road, pavement, treadmill [trail use not stated]\n- **Men's sizes:** UK 5-13\n- **Women's sizes:** UK 3-9\n- **Width options:** [confirm]\n- **Stack height:** [confirm]\n- **Colors:** Black, white, blue\n- **Return policy:** [confirm]\n- **Warranty:** [confirm]\n\n## How it compares\n- **Vs max-cushion road shoes:** Pace 3 should feel lighter and more direct underfoot, which usually suits runners who want quicker turnover. Max-cushion options are the better pick for runners who prioritize impact softness on long easy runs.\n- **Vs stability shoes:** Pace 3 appears aimed at neutral runners and should feel less structured. Stability shoes are the better choice if you overpronate or want guidance features.\n- **Vs trail shoes:** Pace 3 is better suited to smooth roads and treadmills. Trail shoes are the better choice for wet, loose, or uneven terrain where deeper traction and added protection matter.\n- **Vs heavier daily trainers:** Pace 3 should suit runners who want one shoe for everyday road mileage plus occasional faster workouts. Heavier trainers may be better if durability and cushioning matter more than weight.\n- **Vs racing shoes:** Pace 3 is likely more practical for regular training and longer-term durability, while dedicated race shoes are typically more aggressive and less durable for daily use.\n- **Vs the previous Pace model:** The source says the open-weave upper was reworked this season, so this version may offer improved airflow or fit refinement versus the prior model, but no direct side-by-side spec comparison was provided.\n\n## Constraints answered\n- **Budget:** S$179 list price\n- **Available sizes:** Men's UK 5-13; women's UK 3-9\n- **Weight-sensitive buyers:** 238 g listed, but size reference is not provided\n- **Heel drop preference:** 8 mm\n- **Surface filter:** road and treadmill use are the safest supported use cases from the materials and copy\n- **Durability filter:** outsole compound is stated as rated to 700 km, but the source does not name the lab or protocol\n- **Support filter:** likely neutral, but brand should confirm explicitly\n- **Fit filter:** width options not provided\n\n## Evidence\n- Provided product specs list: engineered mesh upper, EVA midsole with rubber outsole, colors, sizes, and S$179 price.\n- Marketing copy states: **238 g**, **8 mm drop**, **open-weave upper reworked this season**, and **outsole compound rated to 700 km**.\n- No certification, lab source, wear-test protocol, review data, return policy, or warranty details were provided in the source text."
+  }
+ ],
+ "trials": [
+  {
+   "query": "best running shoe under s$200 for daily 5k and some weekend 10k",
+   "arm": "bloat",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "L-10 is the best overall fit because it explicitly targets daily training and easy runs, is priced under S$200 at S$189, and has enough cushioning and durability for regular 5k runs plus weekend 10k outings. L-11 is close and even more 5-10km oriented, but it sits right at S$199 and is described as less durable, while L-10 feels more balanced for daily use.",
+   "confidence": 0.86
+  },
+  {
+   "query": "light running shoes around 240g with decent cushioning not super squishy",
+   "arm": "optimized",
+   "won": true,
+   "rank": 1,
+   "total": 5,
+   "reasoning": "L-04 is the closest overall match because it comes in at 238 g, explicitly describes moderate/performance-oriented cushioning, and says it is lighter and firmer-feeling rather than max-soft. L-10 is also close at 245 g with balanced cushioning, but it misses the weight target a bit more and sounds slightly more cushioned/stable than the cleaner fit to the shopper’s “not super squishy” preference.",
+   "confidence": 0.92
+  },
+  {
+   "query": "light running shoes around 240g with decent cushioning not super squishy",
+   "arm": "raw",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "L-11 is the closest overall match: at 228g it’s near the requested around-240g range and it explicitly avoids the mushy feel by describing a quicker, livelier ride. L-13 is also lightweight and firm, but it’s clearly above the likely budget and is more clearly framed as firmer than ideal for someone wanting decent cushioning.",
+   "confidence": 0.84
+  },
+  {
+   "query": "best running shoe under s$200 for daily 5k and some weekend 10k",
+   "arm": "optimized",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-10 best fits the shopper’s budget and use case: it’s under S$200, explicitly made for daily training and easy runs, and it’s also suitable for first half-marathon plans, which covers the weekend 10k well. L-04 and L-11 are both reasonable daily road trainers, but L-10 has the stronger all-around balance here with better stated durability and more direct mention of easy-run mileage, while L-13 is over budget and L-12 is too heavy/comfort-focused for the 5k focus.",
+   "confidence": 0.92
+  },
+  {
+   "query": "light running shoes around 240g with decent cushioning not super squishy",
+   "arm": "bloat",
+   "won": false,
+   "rank": 4,
+   "total": 5,
+   "reasoning": "L-13 is the closest overall match: it’s light at 232g and explicitly says the platform is firmer, which fits the request for decent cushioning that is not super squishy. L-10 is also close at 245g with balanced cushioning, but it’s a bit farther from the target weight and gives less direct evidence about avoiding a squishy feel than L-13.",
+   "confidence": 0.79
+  },
+  {
+   "query": "i need a road running shoe for hot humid singapore weather breathable upper pls",
+   "arm": "raw",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "L-11 most directly matches the shopper’s key need because it explicitly says the monofilament mesh upper is highly breathable for hot, humid climates, while still being a road trainer. L-13 also mentions humid-weather ventilation, but it is above the stated budget and firmer underfoot, so it’s a weaker fit than L-11.",
+   "confidence": 0.96
+  },
+  {
+   "query": "i need a road running shoe for hot humid singapore weather breathable upper pls",
+   "arm": "bloat",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "L-11 is the clearest match because it explicitly says the monofilament mesh upper is highly breathable for hot, humid climates, which directly fits Singapore weather. L-13 also mentions humid-weather ventilation, but L-11 is more direct about breathability while still being a road trainer, and the others are less explicit or even say they run warmer.",
+   "confidence": 0.96
+  },
+  {
+   "query": "which running shoe is lighter but still durable enough for 600 to 700km",
+   "arm": "raw",
+   "won": true,
+   "rank": 1,
+   "total": 5,
+   "reasoning": "L-04 is the best fit because it is both relatively light at 238g and explicitly rated to 700km, which matches the shopper’s durability target. L-10 is also durable, but at 245g it is a bit heavier and is rated to 800km rather than specifically balancing lightness with the requested 600–700km range.",
+   "confidence": 0.88
+  },
+  {
+   "query": "which running shoe is lighter but still durable enough for 600 to 700km",
+   "arm": "bloat",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-11 is the lightest shoe here and is explicitly a lightweight road trainer, but its expected outsole life is only 500-600km, which misses the shopper’s 600 to 700km target by a bit. L-04 is close on durability at 700km and still fairly light at 238g, but it is heavier than L-11 and less clearly “lighter” as the primary fit for the request.",
+   "confidence": 0.86
+  },
+  {
+   "query": "i need a road running shoe for hot humid singapore weather breathable upper pls",
+   "arm": "optimized",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-11 directly matches the shopper’s key constraint by explicitly saying its monofilament mesh upper is highly breathable for hot, humid climates, and it is a road trainer. L-04 is also a solid road shoe with an engineered mesh upper, but it never specifically claims hot-humid breathability, while the others are either less explicit or note trade-offs that make them weaker fits.",
+   "confidence": 0.93
+  },
+  {
+   "query": "which running shoe is lighter but still durable enough for 600 to 700km",
+   "arm": "optimized",
+   "won": true,
+   "rank": 1,
+   "total": 5,
+   "reasoning": "L-04 is the best balance of lighter weight and stated 700 km outsole durability, which matches the shopper’s target range more directly than the others. L-13 is close with 650 km durability and a similar weight, but it is not as durable as requested; L-11 is lighter but its expected outsole life tops out at only 500-600 km.",
+   "confidence": 0.96
+  },
+  {
+   "query": "best running shoe under s$200 for daily 5k and some weekend 10k",
+   "arm": "raw",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "L-11 is the best match because it explicitly targets daily 5–10km runs, is under S$200 at S$199, and is light enough for weekly 5k/10k use. L-10 is also under budget and versatile, but L-11 is more directly tuned to the shopper’s exact run distances, while the others are either less speed-oriented, heavier, or over budget.",
+   "confidence": 0.92
+  },
+  {
+   "query": "good beginner running shoes for training for a half marathon on pavement",
+   "arm": "raw",
+   "won": false,
+   "rank": 4,
+   "total": 5,
+   "reasoning": "L-10 is the clearest match for a beginner training for a half marathon on pavement because it explicitly says it’s for daily training and first half-marathon plans, with balanced cushioning and reliable wet-pavement grip. L-11 is also beginner-friendly and road-oriented, but it doesn’t specifically mention half-marathon training or the same level of durability support as L-10, while L-12 is heavier and more recovery-focused.",
+   "confidence": 0.95
+  },
+  {
+   "query": "good beginner running shoes for training for a half marathon on pavement",
+   "arm": "optimized",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-10 is the clearest match for a beginner training for a half marathon on pavement because it explicitly says it’s for daily training, easy runs, and first half-marathon plans, with reliable wet-pavement grip and durability. L-04 is also a solid road trainer, but it’s framed more as a lighter, performance-oriented shoe for shorter or faster sessions rather than the most beginner-friendly half-marathon choice.",
+   "confidence": 0.95
+  },
+  {
+   "query": "mens uk 11 running shoes under s$180 for treadmill and outdoor road runs",
+   "arm": "bloat",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-12 is the best match because it fits men’s UK 11, is under S$180, and is explicitly a daily trainer suitable for mileage and road running, which makes it the safest option for treadmill and outdoor use. The runner-up, L-04, also fits the size and price constraints but says less about comfort and durability for mixed treadmill/road running, while L-12 directly addresses those needs.",
+   "confidence": 0.84
+  },
+  {
+   "query": "mens uk 11 running shoes under s$180 for treadmill and outdoor road runs",
+   "arm": "raw",
+   "won": true,
+   "rank": 1,
+   "total": 5,
+   "reasoning": "L-04 best matches the shopper’s constraints because it is under S$180, comes in men’s UK sizing up to 13 so UK 11 is covered, and is clearly a road running shoe with a responsive ride. L-10 is the runner-up because it also fits the size need and road use, but it is slightly over budget at S$189, while the others are either less suitable for faster road/treadmill use or more over budget.",
+   "confidence": 0.94
+  },
+  {
+   "query": "good beginner running shoes for training for a half marathon on pavement",
+   "arm": "bloat",
+   "won": false,
+   "rank": 5,
+   "total": 5,
+   "reasoning": "L-10 best matches a beginner training shoe for a half marathon on pavement because it explicitly says it is for daily training and first half-marathon plans, with reliable wet-pavement grip and durable road-focused construction. L-11 is also beginner-friendly and road-oriented, but it is more geared toward shorter daily runs/tempo work and notes lower outsole durability, while L-04 is more generic performance language without the beginner or half-marathon training fit.",
+   "confidence": 0.95
+  },
+  {
+   "query": "mens uk 11 running shoes under s$180 for treadmill and outdoor road runs",
+   "arm": "optimized",
+   "won": true,
+   "rank": 1,
+   "total": 5,
+   "reasoning": "L-04 best matches the shopper’s needs because it explicitly supports road and treadmill use, comes in men’s UK sizes including 11, and is priced at S$179, which is under the S$180 cap. L-10 is also a strong fit but misses the budget by S$9, while the others are either over budget or less directly matched to the stated use case.",
+   "confidence": 0.96
+  },
+  {
+   "query": "womens uk 5 road running shoe that's lightweight and not too aggressive",
+   "arm": "raw",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-11 is the best fit because it explicitly says lightweight, road trainer, and approachable rather than aggressive, while also offering a women's UK 5 size via the women's size range that includes UK 5. L-04 is also lightweight and available in women's sizes, but it is described as more performance-focused and less clearly “not too aggressive” than L-11.",
+   "confidence": 0.91
+  },
+  {
+   "query": "womens uk 5 road running shoe that's lightweight and not too aggressive",
+   "arm": "bloat",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "L-11 is the best fit because it directly offers women's UK 5, is explicitly a lightweight road trainer, and sounds approachable rather than aggressive. L-10 is close on size and road use, but it is heavier and its description leans more toward balanced daily training than lightweight, while the others are either more performance-forward, firmer, or too cushioned/heavy.",
+   "confidence": 0.92
+  },
+  {
+   "query": "daily trainer with 8mm drop for heel striker is that a good option",
+   "arm": "raw",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "L-13 is the clearest match because it’s explicitly a daily/steady trainer and has the requested 8mm drop, which is a good fit for a heel striker looking for that geometry. L-10 is also 8mm and daily-training focused, but L-13 edges it out by directly positioning itself as a versatile daily + uptempo shoe with a responsive platform; the others miss the 8mm drop or are less aligned with daily trainer use.",
+   "confidence": 0.93
+  },
+  {
+   "query": "daily trainer with 8mm drop for heel striker is that a good option",
+   "arm": "bloat",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "L-10 is the best match because it explicitly says it is a daily training road shoe and has the requested 8mm drop, plus it’s described as stable and versatile for easy mileage. L-13 also has an 8mm drop, but it’s framed more as a performance/uptempo trainer and is firmer and above budget, while the others miss either the daily-trainer emphasis or the 8mm-drop detail.",
+   "confidence": 0.95
+  },
+  {
+   "query": "womens uk 5 road running shoe that's lightweight and not too aggressive",
+   "arm": "optimized",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-11 is the best match because it explicitly says lightweight road trainer, has women’s UK 3-9 including UK 5, and describes an approachable ride rather than an aggressive one. L-04 is close, but it sounds more performance-oriented and firmer, which makes it a bit less aligned with “not too aggressive.”",
+   "confidence": 0.91
+  },
+  {
+   "query": "daily trainer with 8mm drop for heel striker is that a good option",
+   "arm": "optimized",
+   "won": true,
+   "rank": 1,
+   "total": 5,
+   "reasoning": "L-04 is the clearest match because it is explicitly a neutral daily trainer with an 8 mm drop, which directly answers the shopper’s heel-striker question. L-10 is also an 8 mm daily trainer, but it emphasizes balanced cushioning and slightly wider fit more than the direct neutral daily-trainer fit, while L-12 has the wrong drop and is heavier.",
+   "confidence": 0.97
+  },
+  {
+   "query": "running shoes with breathable mesh upper and rubber outsole for city runs",
+   "arm": "bloat",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-10 is the best match because it explicitly says engineered mesh upper and a full-contact rubber outsole, which directly fits both of the shopper’s stated requirements. L-04 also has an engineered mesh upper and rubber outsole, but L-10 is more specifically a city/road-running daily trainer with reliable wet-pavement grip, making it the stronger fit for city runs.",
+   "confidence": 0.95
+  },
+  {
+   "query": "running shoes with breathable mesh upper and rubber outsole for city runs",
+   "arm": "raw",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-10 best matches the request because it explicitly has an engineered mesh upper and a full-contact rubber outsole, both directly aligning with breathable mesh and city-run traction needs. L-04 is close with mesh upper and rubber outsole too, but L-10 gives clearer evidence of a mesh upper plus stronger pavement-oriented outsole details, while the others either mention less specific rubber coverage or add trade-offs that fit the request less well.",
+   "confidence": 0.87
+  },
+  {
+   "query": "i want one pair for gym treadmill easy runs and occasional tempo can this work",
+   "arm": "bloat",
+   "won": false,
+   "rank": 4,
+   "total": 5,
+   "reasoning": "L-11 is the clearest match because it explicitly says it is aimed at treadmill sessions, daily runs, and occasional tempo work, which is exactly what the shopper asked for. L-13 is also workout-friendly but is firmer and above the S$200 cap, while the others either lean too slow/heavy or don’t specifically address tempo/treadmill use as well.",
+   "confidence": 0.96
+  },
+  {
+   "query": "i want one pair for gym treadmill easy runs and occasional tempo can this work",
+   "arm": "raw",
+   "won": false,
+   "rank": 4,
+   "total": 5,
+   "reasoning": "L-11 directly says it is aimed at one shoe for treadmill sessions, daily runs, and occasional tempo work, which matches the shopper’s exact use case best. L-13 is also suitable for uptempo sessions, but it’s above the stated S$200 cap and is described as firmer for easy-day running, while L-11 stays more approachable for that mix.",
+   "confidence": 0.97
+  },
+  {
+   "query": "i want one pair for gym treadmill easy runs and occasional tempo can this work",
+   "arm": "optimized",
+   "won": true,
+   "rank": 1,
+   "total": 5,
+   "reasoning": "L-04 most directly matches the shopper’s use case because it explicitly says it can handle treadmill running plus tempo sessions, while still being a neutral daily trainer for regular easy miles. L-11 is also a good fit, but it emphasizes a livelier, lighter ride with less durability, and the others skew either firmer, less snappy, or more comfort-focused than the shopper asked for.",
+   "confidence": 0.93
+  },
+  {
+   "query": "running shoes with breathable mesh upper and rubber outsole for city runs",
+   "arm": "optimized",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-11 best matches the shopper because it explicitly says it has a highly breathable mesh upper, rubber outsole coverage, and is aimed at road running for daily 5-10km city-style use. L-04 is also a solid fit, but it is less specific about breathability than L-11 and doesn’t beat the direct “highly breathable” claim.",
+   "confidence": 0.95
+  },
+  {
+   "query": "what's a good lightweight road shoe for someone moving up from casual sneakers",
+   "arm": "raw",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "L-11 is the best fit because it explicitly targets runners who want a lightweight road trainer and says it’s approachable for beginners, which matches someone moving up from casual sneakers. L-10 is a solid backup, but it reads more like a balanced daily trainer and is less directly positioned as lightweight and beginner-friendly.",
+   "confidence": 0.93
+  },
+  {
+   "query": "what's a good lightweight road shoe for someone moving up from casual sneakers",
+   "arm": "bloat",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-11 is the best fit because it is explicitly a lightweight road trainer at 228g and says it is approachable for beginners, which matches someone moving up from casual sneakers. L-04 is also lightweight, but it reads more like a performance-oriented shoe and gives less clear beginner-friendly cushioning guidance than L-11.",
+   "confidence": 0.92
+  },
+  {
+   "query": "what's a good lightweight road shoe for someone moving up from casual sneakers",
+   "arm": "optimized",
+   "won": false,
+   "rank": 2,
+   "total": 5,
+   "reasoning": "L-11 is the best fit because it explicitly targets lightweight road training and says it’s approachable for beginners, which matches someone moving up from casual sneakers. L-04 is also lightweight and road-focused, but L-11 gives the clearest beginner-friendly framing and a slightly more directly relevant use case.",
+   "confidence": 0.84
+  },
+  {
+   "query": "which is better for me a lightweight trainer or max cushion shoe for sore knees",
+   "arm": "raw",
+   "won": false,
+   "rank": 5,
+   "total": 5,
+   "reasoning": "For sore knees, the max-cushion option is the best fit because it explicitly prioritizes comfort and cushioning over speed, which is more relevant than a lightweight trainer. The best lightweight trainer here is L-11, but it still emphasizes a livelier ride and lower weight rather than the extra comfort a sore-knee shopper is asking about.",
+   "confidence": 0.95
+  },
+  {
+   "query": "which is better for me a lightweight trainer or max cushion shoe for sore knees",
+   "arm": "bloat",
+   "won": false,
+   "rank": 5,
+   "total": 5,
+   "reasoning": "L-12 is the clearest match for sore knees because it explicitly emphasizes comfort and cushioning, which is the main thing a max-cushion shoe is meant to offer. L-11 and L-04 are lightweight trainers and therefore less aligned with the sore-knees concern, while L-10 and L-13 are more balanced/firm rather than max-cushion.",
+   "confidence": 0.93
+  },
+  {
+   "query": "which is better for me a lightweight trainer or max cushion shoe for sore knees",
+   "arm": "optimized",
+   "won": false,
+   "rank": 3,
+   "total": 5,
+   "reasoning": "For sore knees, the max-cushion shoe is the clearest match because it explicitly prioritizes comfort and recovery, with the highest stack and softest-sounding setup in the list. The lightweight trainers are more about speed, responsiveness, and lower weight, and one of them even says it is less suited to max-cushion comfort, so they are weaker fits for knee soreness.",
+   "confidence": 0.94
+  }
+ ],
+ "summary": {
+  "stats": [
+   {
+    "arm": "raw",
+    "label": "Raw catalogue",
+    "wins": 2,
+    "topThree": 9,
+    "total": 12,
+    "meanRank": 2.83,
+    "mrr": 0.447,
+    "recallAt3": 0.75,
+    "meanWords": 84
+   },
+   {
+    "arm": "bloat",
+    "label": "Bloat control",
+    "wins": 0,
+    "topThree": 8,
+    "total": 12,
+    "meanRank": 3.17,
+    "mrr": 0.353,
+    "recallAt3": 0.667,
+    "meanWords": 491
+   },
+   {
+    "arm": "optimized",
+    "label": "AgentRank",
+    "wins": 5,
+    "topThree": 12,
+    "total": 12,
+    "meanRank": 1.67,
+    "mrr": 0.694,
+    "recallAt3": 1,
+    "meanWords": 608
+   }
+  ],
+  "flips": [
+   {
+    "query": "light running shoes around 240g with decent cushioning not super squishy",
+    "optimizedReasoning": "L-04 is the closest overall match because it comes in at 238 g, explicitly describes moderate/performance-oriented cushioning, and says it is lighter and firmer-feeling rather than max-soft. L-10 is also close at 245 g with balanced cushioning, but it misses the weight target a bit more and sounds slightly more cushioned/stable than the cleaner fit to the shopper’s “not super squishy” preference.",
+    "original": {
+     "query": "light running shoes around 240g with decent cushioning not super squishy",
+     "arm": "raw",
+     "won": false,
+     "rank": 3,
+     "total": 5,
+     "reasoning": "L-11 is the closest overall match: at 228g it’s near the requested around-240g range and it explicitly avoids the mushy feel by describing a quicker, livelier ride. L-13 is also lightweight and firm, but it’s clearly above the likely budget and is more clearly framed as firmer than ideal for someone wanting decent cushioning.",
+     "confidence": 0.84
+    }
+   },
+   {
+    "query": "daily trainer with 8mm drop for heel striker is that a good option",
+    "optimizedReasoning": "L-04 is the clearest match because it is explicitly a neutral daily trainer with an 8 mm drop, which directly answers the shopper’s heel-striker question. L-10 is also an 8 mm daily trainer, but it emphasizes balanced cushioning and slightly wider fit more than the direct neutral daily-trainer fit, while L-12 has the wrong drop and is heavier.",
+    "original": {
+     "query": "daily trainer with 8mm drop for heel striker is that a good option",
+     "arm": "raw",
+     "won": false,
+     "rank": 3,
+     "total": 5,
+     "reasoning": "L-13 is the clearest match because it’s explicitly a daily/steady trainer and has the requested 8mm drop, which is a good fit for a heel striker looking for that geometry. L-10 is also 8mm and daily-training focused, but L-13 edges it out by directly positioning itself as a versatile daily + uptempo shoe with a responsive platform; the others miss the 8mm drop or are less aligned with daily trainer use.",
+     "confidence": 0.93
+    }
+   },
+   {
+    "query": "i want one pair for gym treadmill easy runs and occasional tempo can this work",
+    "optimizedReasoning": "L-04 most directly matches the shopper’s use case because it explicitly says it can handle treadmill running plus tempo sessions, while still being a neutral daily trainer for regular easy miles. L-11 is also a good fit, but it emphasizes a livelier, lighter ride with less durability, and the others skew either firmer, less snappy, or more comfort-focused than the shopper asked for.",
+    "original": {
+     "query": "i want one pair for gym treadmill easy runs and occasional tempo can this work",
+     "arm": "raw",
+     "won": false,
+     "rank": 4,
+     "total": 5,
+     "reasoning": "L-11 directly says it is aimed at one shoe for treadmill sessions, daily runs, and occasional tempo work, which matches the shopper’s exact use case best. L-13 is also suitable for uptempo sessions, but it’s above the stated S$200 cap and is described as firmer for easy-day running, while L-11 stays more approachable for that mix.",
+     "confidence": 0.97
+    }
+   }
+  ]
  }
 }

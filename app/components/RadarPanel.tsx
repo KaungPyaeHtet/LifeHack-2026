@@ -2,7 +2,7 @@
 
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
-  ResponsiveContainer, Legend,
+  ResponsiveContainer,
 } from "recharts";
 import { DIMENSIONS, type DimensionKey } from "@/lib/dimensions";
 
@@ -19,19 +19,22 @@ export function RadarPanel({
     ...(after ? { Optimized: after[d.key] ?? 0 } : {}),
   }));
 
+  // No legend: the dial beside it already carries the colour key, and
+  // repeating it stole vertical room the chart needed.
   return (
-    <div className="h-72 w-full">
+    <div className="h-[300px] w-full">
       <ResponsiveContainer>
-        <RadarChart data={data} outerRadius="72%">
+        <RadarChart data={data} outerRadius="78%" margin={{ top: 8, right: 8, bottom: 8, left: 8 }}>
           <PolarGrid stroke="var(--border)" />
           <PolarAngleAxis
             dataKey="axis"
             tick={{ fill: "var(--muted)", fontSize: 11 }}
+            tickSize={12}
           />
           <PolarRadiusAxis domain={[0, 100]} tick={false} axisLine={false} />
           <Radar
             name="Original" dataKey="Original"
-            stroke="var(--bad)" fill="var(--bad)" fillOpacity={0.18}
+            stroke="var(--warn)" fill="var(--warn)" fillOpacity={0.14}
           />
           {after && (
             <Radar
@@ -39,10 +42,6 @@ export function RadarPanel({
               stroke="var(--accent)" fill="var(--accent)" fillOpacity={0.18}
             />
           )}
-          <Legend
-            wrapperStyle={{ fontSize: 11, color: "var(--muted)" }}
-            iconType="plainline"
-          />
         </RadarChart>
       </ResponsiveContainer>
     </div>

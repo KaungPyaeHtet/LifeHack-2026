@@ -1,0 +1,510 @@
+[
+ {
+  "shopperId": "budget-beginner",
+  "labels": {
+   "a-1": "E",
+   "a-2": "I",
+   "a-3": "I",
+   "a-4": "I",
+   "a-5": "I",
+   "b-1": "E",
+   "b-2": "I",
+   "b-3": "I",
+   "b-4": "I",
+   "b-5": "I",
+   "c-1": "E",
+   "c-2": "I",
+   "c-3": "I",
+   "c-4": "I",
+   "c-5": "I",
+   "d-1": "E",
+   "d-2": "I",
+   "d-3": "I",
+   "d-4": "I",
+   "d-5": "I",
+   "e-1": "E",
+   "e-2": "I",
+   "e-3": "I",
+   "e-4": "I",
+   "e-5": "I",
+   "f-1": "E",
+   "f-2": "I",
+   "f-3": "I",
+   "f-4": "I",
+   "f-5": "I"
+  },
+  "rawNdcg": 1,
+  "arNdcg": 1,
+  "raw": {
+   "picks": [
+    {
+     "id": "b-1",
+     "reason": "You’re just starting out and want a comfy pavement shoe under S$100, and this listing directly says it’s an approachable road shoe for new runners with dependable comfort at S$60.",
+     "unmet": ""
+    },
+    {
+     "id": "d-1",
+     "reason": "This is clearly aimed at new runners and regular pavement use, and the listed 272 g weight is a plus, but the price is not stated so I can’t verify it fits your hard S$100 budget.",
+     "unmet": "Price under S$100 is not stated."
+    },
+    {
+     "id": "f-1",
+     "reason": "This listing explicitly targets new runners and everyday jogs with comfortable cushioning, but it does not confirm a price under S$100 for your hard budget.",
+     "unmet": "Price under S$100 is not stated."
+    }
+   ],
+   "shortlisted": [
+    "b-1",
+    "d-1",
+    "f-1",
+    "e-1",
+    "c-1",
+    "a-1",
+    "e-5",
+    "c-5"
+   ]
+  },
+  "ar": {
+   "picks": [
+    {
+     "id": "b-1",
+     "reason": "You’re just starting out on pavement and want comfort under S$100, and this is one of the cheapest options at S$60 while clearly being built for first-time runners with medium-soft cushioning, road use, and a standard-width fit.",
+     "unmet": ""
+    },
+    {
+     "id": "c-1",
+     "reason": "If you want a more comfort-leaning beginner road shoe, this one is still only S$69 and specifically suits walk-run plans up to regular 3–10 km road training, with medium-soft cushioning and a regular fit that should suit normal-width feet.",
+     "unmet": ""
+    },
+    {
+     "id": "d-1",
+     "reason": "This is a strong safe starter choice for you because it is explicitly designed for beginners on road and pavement, costs S$69, and has a medium width, though its cushioning is only moderate and the ride is slightly firm rather than plush.",
+     "unmet": ""
+    }
+   ],
+   "shortlisted": [
+    "d-1",
+    "f-1",
+    "e-1",
+    "c-1",
+    "a-1",
+    "b-1",
+    "c-5",
+    "a-5"
+   ]
+  },
+  "titles": {
+   "a-1": "Northline StartRide 2",
+   "a-2": "Harbor Glide Max",
+   "a-3": "Vector Apex RC",
+   "a-4": "TrailFen Ridge 4",
+   "a-5": "Broadway Flow Wide",
+   "b-1": "Strider Flow 2",
+   "b-2": "Northpath Ridge 5",
+   "b-3": "AeroPulse RC",
+   "b-4": "CloudHarbor Max",
+   "b-5": "OpenRoad Wide",
+   "c-1": "Northline PaceStart 2",
+   "c-2": "HarborRun WideFlow 4E",
+   "c-3": "SummitVeil TrailGrip 6",
+   "c-4": "AeroPulse CF Elite",
+   "c-5": "CloudHarbor Max 3",
+   "d-1": "Northline StartRun 2",
+   "d-2": "Harbor Glide Max",
+   "d-3": "Summit Talon TR",
+   "d-4": "Aerlite Carbon RC",
+   "d-5": "Broadway Flow Wide",
+   "e-1": "Northline Pace 2",
+   "e-2": "Harbor Flow Wide",
+   "e-3": "Summit Aero Pro",
+   "e-4": "Cloudrest Max",
+   "e-5": "Ridgepath TR",
+   "f-1": "Northline Stride 4",
+   "f-2": "Verdant Ridge TR",
+   "f-3": "Aeris Carbon Elite",
+   "f-4": "CloudHarbor Max",
+   "f-5": "OpenRoad WideFlow"
+  }
+ },
+ {
+  "shopperId": "humid-half",
+  "labels": {
+   "a-1": "S",
+   "a-2": "I",
+   "a-3": "I",
+   "a-4": "I",
+   "a-5": "S",
+   "b-1": "S",
+   "b-2": "I",
+   "b-3": "I",
+   "b-4": "I",
+   "b-5": "S",
+   "c-1": "S",
+   "c-2": "S",
+   "c-3": "I",
+   "c-4": "I",
+   "c-5": "I",
+   "d-1": "S",
+   "d-2": "I",
+   "d-3": "I",
+   "d-4": "I",
+   "d-5": "S",
+   "e-1": "S",
+   "e-2": "E",
+   "e-3": "I",
+   "e-4": "I",
+   "e-5": "I",
+   "f-1": "S",
+   "f-2": "I",
+   "f-3": "I",
+   "f-4": "I",
+   "f-5": "E"
+  },
+  "rawNdcg": 0.17,
+  "arNdcg": 0.339,
+  "raw": {
+   "picks": [
+    {
+     "id": "f-3",
+     "reason": "You asked for a lightweight half-marathon shoe for hot, humid conditions, and this listing directly gives you a feather-light 198 g build plus a breathable upper and says it is ideal for half-marathon racing.",
+     "unmet": "The listing does not state a price, so I cannot verify it is under S$200."
+    },
+    {
+     "id": "e-3",
+     "reason": "This is another strong match because it is explicitly 198 g and built for race day from 10K through the marathon, but the listing does not mention breathability or cooling for your hot feet.",
+     "unmet": "The listing does not state a price, so I cannot verify it is under S$200."
+    },
+    {
+     "id": "b-1",
+     "reason": "If staying under budget is your priority, this S$60 option does explicitly mention a breathable mesh upper and a roomier toe shape, though it is positioned as an everyday starter shoe rather than a dedicated half-marathon racer and its weight is not given.",
+     "unmet": "The listing does not state the shoe’s weight, so I cannot verify how light it is."
+    }
+   ],
+   "shortlisted": [
+    "b-1",
+    "e-3",
+    "f-3",
+    "d-1",
+    "d-4",
+    "b-4",
+    "e-1",
+    "f-1"
+   ]
+  },
+  "ar": {
+   "picks": [
+    {
+     "id": "f-1",
+     "reason": "For your under-S$200 budget, this is the lightest shoe here that also explicitly has a breathable engineered mesh upper, so it best matches your need for a light road shoe in Singapore heat, though it is only described for short easy runs rather than half-marathon distance.",
+     "unmet": "Not verified for half-marathon or long-run comfort; best for short easy runs and not for long runs over 10 km."
+    },
+    {
+     "id": "f-3",
+     "reason": "This is by far the lightest and most half-marathon-specific option at 198 g with an ultralight woven mesh upper, but it is ranked lower because it blows your budget at S$259 and is best for experienced racers with efficient form.",
+     "unmet": "Over budget; listing does not explicitly claim cooling or hot-weather ventilation."
+    },
+    {
+     "id": "e-3",
+     "reason": "This also gives you true half-marathon race focus and very low weight at 198 g with a mono mesh race upper, but it ranks behind the others because it costs S$260 and the listing does not explicitly address hot-weather breathability beyond the mesh upper.",
+     "unmet": "Over budget; no explicit hot-weather or cooling claim."
+    }
+   ],
+   "shortlisted": [
+    "f-3",
+    "e-3",
+    "d-1",
+    "a-1",
+    "c-1",
+    "e-1",
+    "f-1",
+    "b-1"
+   ]
+  },
+  "titles": {
+   "a-1": "Northline StartRide 2",
+   "a-2": "Harbor Glide Max",
+   "a-3": "Vector Apex RC",
+   "a-4": "TrailFen Ridge 4",
+   "a-5": "Broadway Flow Wide",
+   "b-1": "Strider Flow 2",
+   "b-2": "Northpath Ridge 5",
+   "b-3": "AeroPulse RC",
+   "b-4": "CloudHarbor Max",
+   "b-5": "OpenRoad Wide",
+   "c-1": "Northline PaceStart 2",
+   "c-2": "HarborRun WideFlow 4E",
+   "c-3": "SummitVeil TrailGrip 6",
+   "c-4": "AeroPulse CF Elite",
+   "c-5": "CloudHarbor Max 3",
+   "d-1": "Northline StartRun 2",
+   "d-2": "Harbor Glide Max",
+   "d-3": "Summit Talon TR",
+   "d-4": "Aerlite Carbon RC",
+   "d-5": "Broadway Flow Wide",
+   "e-1": "Northline Pace 2",
+   "e-2": "Harbor Flow Wide",
+   "e-3": "Summit Aero Pro",
+   "e-4": "Cloudrest Max",
+   "e-5": "Ridgepath TR",
+   "f-1": "Northline Stride 4",
+   "f-2": "Verdant Ridge TR",
+   "f-3": "Aeris Carbon Elite",
+   "f-4": "CloudHarbor Max",
+   "f-5": "OpenRoad WideFlow"
+  }
+ },
+ {
+  "shopperId": "heavy-wide",
+  "labels": {
+   "a-1": "S",
+   "a-2": "S",
+   "a-3": "I",
+   "a-4": "I",
+   "a-5": "E",
+   "b-1": "S",
+   "b-2": "I",
+   "b-3": "I",
+   "b-4": "S",
+   "b-5": "S",
+   "c-1": "S",
+   "c-2": "E",
+   "c-3": "I",
+   "c-4": "I",
+   "c-5": "S",
+   "d-1": "S",
+   "d-2": "S",
+   "d-3": "I",
+   "d-4": "I",
+   "d-5": "E",
+   "e-1": "S",
+   "e-2": "E",
+   "e-3": "I",
+   "e-4": "S",
+   "e-5": "I",
+   "f-1": "S",
+   "f-2": "I",
+   "f-3": "I",
+   "f-4": "S",
+   "f-5": "E"
+  },
+  "rawNdcg": 1,
+  "arNdcg": 0.922,
+  "raw": {
+   "picks": [
+    {
+     "id": "c-2",
+     "reason": "You should start with this because its extra-wide 4E fit directly addresses your wide feet, and the listing also backs up a planted ride with soft yet steady cushioning plus durable outsole coverage for daily pavement running.",
+     "unmet": ""
+    },
+    {
+     "id": "d-5",
+     "reason": "This is a strong match for you because the listing specifically mentions a wide fit, spacious forefoot, and soft cushioning that helps take the edge off repetitive pavement miles on hard surfaces.",
+     "unmet": ""
+    },
+    {
+     "id": "f-5",
+     "reason": "This is another good option because its stated 2E fit and soft, resilient cushioning are aimed at runners who need more room and daily comfort for easy miles and regular training.",
+     "unmet": ""
+    }
+   ],
+   "shortlisted": [
+    "b-1",
+    "f-5",
+    "e-4",
+    "c-2",
+    "f-1",
+    "c-5",
+    "d-5",
+    "b-5"
+   ]
+  },
+  "ar": {
+   "picks": [
+    {
+     "id": "c-2",
+     "reason": "You’re the clearest fit here because this road trainer explicitly targets heavier runners and genuine extra-wide feet with a 4E high-volume toe box, plus a broad planted platform and moderate-high cushioning for easy pavement miles.",
+     "unmet": ""
+    },
+    {
+     "id": "a-5",
+     "reason": "This is another strong match for your road 5 km runs because it has verified wide 2E fit, moderate-soft cushioning, and an accommodating forefoot, though it is less explicitly protective for heavier runners than the top pick.",
+     "unmet": "The listing does not specifically say it is designed for heavier runners or knee sensitivity."
+    },
+    {
+     "id": "c-5",
+     "reason": "If your main goal is reducing concrete harshness, this max-cushion road shoe gives the strongest verified impact protection with soft plush cushioning and a slightly wide fit, but it is not a true wide-fit model.",
+     "unmet": "The listing does not explicitly say it is for wide feet, only regular to slightly wide, and it does not specifically mention knee pain."
+    }
+   ],
+   "shortlisted": [
+    "a-5",
+    "d-1",
+    "e-4",
+    "f-1",
+    "e-1",
+    "c-5",
+    "c-2",
+    "f-4"
+   ]
+  },
+  "titles": {
+   "a-1": "Northline StartRide 2",
+   "a-2": "Harbor Glide Max",
+   "a-3": "Vector Apex RC",
+   "a-4": "TrailFen Ridge 4",
+   "a-5": "Broadway Flow Wide",
+   "b-1": "Strider Flow 2",
+   "b-2": "Northpath Ridge 5",
+   "b-3": "AeroPulse RC",
+   "b-4": "CloudHarbor Max",
+   "b-5": "OpenRoad Wide",
+   "c-1": "Northline PaceStart 2",
+   "c-2": "HarborRun WideFlow 4E",
+   "c-3": "SummitVeil TrailGrip 6",
+   "c-4": "AeroPulse CF Elite",
+   "c-5": "CloudHarbor Max 3",
+   "d-1": "Northline StartRun 2",
+   "d-2": "Harbor Glide Max",
+   "d-3": "Summit Talon TR",
+   "d-4": "Aerlite Carbon RC",
+   "d-5": "Broadway Flow Wide",
+   "e-1": "Northline Pace 2",
+   "e-2": "Harbor Flow Wide",
+   "e-3": "Summit Aero Pro",
+   "e-4": "Cloudrest Max",
+   "e-5": "Ridgepath TR",
+   "f-1": "Northline Stride 4",
+   "f-2": "Verdant Ridge TR",
+   "f-3": "Aeris Carbon Elite",
+   "f-4": "CloudHarbor Max",
+   "f-5": "OpenRoad WideFlow"
+  }
+ },
+ {
+  "shopperId": "trail",
+  "labels": {
+   "a-1": "I",
+   "a-2": "I",
+   "a-3": "I",
+   "a-4": "S",
+   "a-5": "I",
+   "b-1": "I",
+   "b-2": "E",
+   "b-3": "I",
+   "b-4": "I",
+   "b-5": "I",
+   "c-1": "I",
+   "c-2": "I",
+   "c-3": "E",
+   "c-4": "I",
+   "c-5": "I",
+   "d-1": "I",
+   "d-2": "I",
+   "d-3": "E",
+   "d-4": "I",
+   "d-5": "I",
+   "e-1": "I",
+   "e-2": "I",
+   "e-3": "I",
+   "e-4": "I",
+   "e-5": "E",
+   "f-1": "I",
+   "f-2": "S",
+   "f-3": "I",
+   "f-4": "I",
+   "f-5": "I"
+  },
+  "rawNdcg": 0.823,
+  "arNdcg": 1,
+  "raw": {
+   "picks": [
+    {
+     "id": "c-3",
+     "reason": "You want proper grip and protection for muddy gravel trails, and this listing most directly backs that up with dependable traction, all-around protection, a protective forefoot shield, and the deepest stated lugs at 5 mm for loose, uneven surfaces.",
+     "unmet": "The listing does not state a price, so I cannot verify it fits your S$260 budget."
+    },
+    {
+     "id": "f-2",
+     "reason": "This is a strong match for your weekend gravel and muddy trail runs because it specifically mentions loose gravel and damp paths, plus a protective upper and grippy outsole with 4.5 mm lugs for mixed off-road terrain.",
+     "unmet": "The listing does not state a price, so I cannot verify it fits your S$260 budget."
+    },
+    {
+     "id": "a-4",
+     "reason": "You should consider this if you want a balanced mix of grip and protection, since it explicitly says the reinforced upper and 4.5 mm lugs handle loose ground and longer outings on gravel paths and rooty singletrack.",
+     "unmet": "The listing does not state a price, so I cannot verify it fits your S$260 budget."
+    }
+   ],
+   "shortlisted": [
+    "f-2",
+    "c-3",
+    "e-5",
+    "d-3",
+    "a-4",
+    "b-2",
+    "b-1",
+    "d-2"
+   ]
+  },
+  "ar": {
+   "picks": [
+    {
+     "id": "c-3",
+     "reason": "For your muddy gravel trail runs, this is the strongest match because it explicitly targets gravel and moderate mud, adds the most verified grip here with 5 mm lugs, and gives you solid protection from its rock shield and reinforced toe bumper.",
+     "unmet": ""
+    },
+    {
+     "id": "e-5",
+     "reason": "This is a very good budget-friendly option for you because it is built for trails, gravel, and light mud with sticky rubber traction plus a forefoot rock shield, though it is not aimed at deep wet conditions.",
+     "unmet": ""
+    },
+    {
+     "id": "b-2",
+     "reason": "You should consider this if you want a planted, protective feel for gravel and light mud, but it ranks behind the top two because its mud use is only described as light and its toe box may feel narrow.",
+     "unmet": ""
+    }
+   ],
+   "shortlisted": [
+    "c-3",
+    "b-2",
+    "f-2",
+    "e-5",
+    "a-4",
+    "d-3",
+    "a-2",
+    "a-3"
+   ]
+  },
+  "titles": {
+   "a-1": "Northline StartRide 2",
+   "a-2": "Harbor Glide Max",
+   "a-3": "Vector Apex RC",
+   "a-4": "TrailFen Ridge 4",
+   "a-5": "Broadway Flow Wide",
+   "b-1": "Strider Flow 2",
+   "b-2": "Northpath Ridge 5",
+   "b-3": "AeroPulse RC",
+   "b-4": "CloudHarbor Max",
+   "b-5": "OpenRoad Wide",
+   "c-1": "Northline PaceStart 2",
+   "c-2": "HarborRun WideFlow 4E",
+   "c-3": "SummitVeil TrailGrip 6",
+   "c-4": "AeroPulse CF Elite",
+   "c-5": "CloudHarbor Max 3",
+   "d-1": "Northline StartRun 2",
+   "d-2": "Harbor Glide Max",
+   "d-3": "Summit Talon TR",
+   "d-4": "Aerlite Carbon RC",
+   "d-5": "Broadway Flow Wide",
+   "e-1": "Northline Pace 2",
+   "e-2": "Harbor Flow Wide",
+   "e-3": "Summit Aero Pro",
+   "e-4": "Cloudrest Max",
+   "e-5": "Ridgepath TR",
+   "f-1": "Northline Stride 4",
+   "f-2": "Verdant Ridge TR",
+   "f-3": "Aeris Carbon Elite",
+   "f-4": "CloudHarbor Max",
+   "f-5": "OpenRoad WideFlow"
+  }
+ }
+]

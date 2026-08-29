@@ -85,3 +85,7 @@ export const queryBankSchema = z.object({
     ),
 });
 export type QueryBank = z.infer<typeof queryBankSchema>;
+
+export const bloatSchema = z.object({
+  bloated: z.string().describe("The padded listing. Prose only, no new facts."),
+});

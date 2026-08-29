@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Agent-Ready Commerce Copilot",
+  title: "AgentRank",
   description:
-    "Score, optimize and simulate product content for AI shopping agents.",
+    "Your product ranks #1 on Google. Where does it rank with an agent?",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

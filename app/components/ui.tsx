@@ -60,32 +60,107 @@ export const bandColor = (score: number) =>
     band(score)
   ];
 
-export function ScoreDial({ score, label }: { score: number; label: string }) {
-  const r = 34;
-  const c = 2 * Math.PI * r;
+/**
+ * One ring, two arcs. Two separate dials left the eye to compute the delta on
+ * its own and wasted the column; concentric arcs put before and after in the
+ * same glance, with the gain stated outright.
+ */
+export function DualDial({ before, after }: { before: number; after?: number }) {
+  const arc = (r: number, value: number, color: string, width: number) => {
+    const c = 2 * Math.PI * r;
+    return (
+      <>
+        <circle cx="60" cy="60" r={r} fill="none" stroke="var(--border)" strokeWidth={width} />
+        <circle
+          cx="60" cy="60" r={r} fill="none"
+          stroke={color} strokeWidth={width} strokeLinecap="round"
+          strokeDasharray={c} strokeDashoffset={c * (1 - value / 100)}
+          style={{ transition: "stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1)" }}
+        />
+      </>
+    );
+  };
+
+  const headline = after ?? before;
+  const gain = after !== undefined ? after - before : null;
+
   return (
-    <div className="flex flex-col items-center gap-1.5">
-      <div className="relative h-24 w-24">
-        <svg viewBox="0 0 80 80" className="h-full w-full -rotate-90">
-          <circle
-            cx="40" cy="40" r={r} fill="none"
-            stroke="var(--border)" strokeWidth="6"
-          />
-          <circle
-            cx="40" cy="40" r={r} fill="none"
-            stroke={bandColor(score)} strokeWidth="6" strokeLinecap="round"
-            strokeDasharray={c}
-            strokeDashoffset={c * (1 - score / 100)}
-            style={{ transition: "stroke-dashoffset 1s cubic-bezier(.2,.8,.2,1)" }}
-          />
+    <div className="flex flex-col items-center">
+      <div className="relative h-[132px] w-[132px]">
+        <svg viewBox="0 0 120 120" className="h-full w-full -rotate-90">
+          {after !== undefined && arc(38, before, "var(--warn)", 7)}
+          {arc(52, headline, bandColor(headline), 8)}
         </svg>
-        <div className="absolute inset-0 grid place-items-center">
-          <span className="text-2xl font-semibold tabular-nums">{score}</span>
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <span className="text-[32px] font-semibold leading-none tabular-nums">
+            {headline}
+          </span>
+          {gain !== null && (
+            <span className="mt-1 text-xs font-medium tabular-nums text-[var(--accent)]">
+              +{gain}
+            </span>
+          )}
         </div>
       </div>
-      <span className="text-xs uppercase tracking-wider text-[var(--muted)]">
-        {label}
-      </span>
+
+      <div className="mt-3 space-y-1 text-xs">
+        {after !== undefined && (
+          <Key color="var(--warn)" label="Original" value={before} />
+        )}
+        <Key
+          color={bandColor(headline)}
+          label={after !== undefined ? "Optimized" : "Readiness"}
+          value={headline}
+        />
+      </div>
+    </div>
+  );
+}
+
+function Key({ color, label, value }: { color: string; label: string; value: number }) {
+  return (
+    <div className="flex items-center gap-2">
+      <span className="h-1.5 w-1.5 rounded-full" style={{ background: color }} />
+      <span className="text-[var(--muted)]">{label}</span>
+      <span className="ml-auto tabular-nums">{value}</span>
+    </div>
+  );
+}
+
+/**
+ * A single track carrying both values: the original runs as a dim base, the
+ * improvement continues it in accent. The old version drew only the `after`
+ * value, so the delta the numbers claimed was nowhere on screen.
+ */
+export function DeltaBar({ before, after }: { before: number; after?: number }) {
+  if (after === undefined) {
+    return (
+      <div className="h-1.5 w-full overflow-hidden rounded-full bg-[var(--border)]">
+        <div
+          className="h-full rounded-full transition-all duration-1000"
+          style={{ width: `${before}%`, background: bandColor(before) }}
+        />
+      </div>
+    );
+  }
+
+  const shrank = after < before;
+  const base = Math.min(before, after);
+  const change = Math.abs(after - before);
+
+  return (
+    <div className="relative flex h-1.5 w-full overflow-hidden rounded-full bg-[var(--border)]">
+      <div
+        className="h-full transition-all duration-1000"
+        style={{ width: `${base}%`, background: "var(--warn)", opacity: 0.55 }}
+      />
+      <div
+        className="h-full transition-all duration-1000"
+        style={{
+          width: `${change}%`,
+          background: shrank ? "var(--bad)" : "var(--accent)",
+        }}
+      />
     </div>
   );
 }

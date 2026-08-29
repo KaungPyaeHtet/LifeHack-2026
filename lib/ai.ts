@@ -1,4 +1,4 @@
-import { generateText, Output } from "ai";
+import { cosineSimilarity, embedMany, generateText, Output } from "ai";
 import { createOpenAI } from "@ai-sdk/openai";
 import type { z } from "zod";
 
@@ -9,6 +9,7 @@ import type { z } from "zod";
  */
 export const REASONING_MODEL = process.env.AGENT_MODEL ?? "gpt-5.4";
 export const FAST_MODEL = process.env.AGENT_FAST_MODEL ?? "gpt-5.4-mini";
+export const EMBED_MODEL = process.env.AGENT_EMBED_MODEL ?? "text-embedding-3-small";
 
 const usingGateway = () =>
   Boolean(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN);
@@ -50,4 +51,35 @@ export class MissingKeyError extends Error {
 
 export function requireKey() {
   if (!hasKey()) throw new MissingKeyError();
+}
+
+/**
+ * Stage one of retrieval. A production catalogue has tens of thousands of
+ * SKUs and cannot be pasted into a prompt, so the LLM only ever reranks a
+ * shortlist. Embeddings do the cheap wide pass; the model does the expensive
+ * narrow one. Here the shortlist is computed per request because the catalogue
+ * is small — at real scale these vectors live in an index and only the query
+ * is embedded at query time.
+ */
+export async function shortlist(
+  query: string,
+  docs: { id: string; text: string }[],
+  k: number,
+): Promise<{ id: string; score: number }[]> {
+  const model = usingGateway()
+    ? `openai/${EMBED_MODEL}`
+    : createOpenAI({ apiKey: process.env.OPENAI_API_KEY }).textEmbeddingModel(
+        EMBED_MODEL,
+      );
+
+  const { embeddings } = await embedMany({
+    model,
+    values: [query, ...docs.map((d) => d.text)],
+  });
+
+  const [queryVec, ...docVecs] = embeddings;
+  return docs
+    .map((d, i) => ({ id: d.id, score: cosineSimilarity(queryVec, docVecs[i]) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, k);
 }

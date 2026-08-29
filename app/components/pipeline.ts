@@ -6,21 +6,21 @@ import type { Trial } from "@/lib/simulate";
 
 export type Scored = ScoreResult & { overall: number };
 
-export interface ArmStat {
-  wins: number;
-  topThree: number;
-  total: number;
-  meanRank: number;
-}
+export type { ArmStat } from "@/lib/simulate";
 
 export interface Summary {
-  original: ArmStat;
-  optimized: ArmStat;
+  stats: import("@/lib/simulate").ArmStat[];
   flips: {
     query: string;
     optimizedReasoning: string;
     original?: Trial;
   }[];
+}
+
+export interface Arm {
+  id: string;
+  label: string;
+  content: string;
 }
 
 async function post<T>(url: string, body: unknown): Promise<T> {
@@ -56,10 +56,12 @@ export function originalContent(p: Product): string {
   return [p.title, p.specs, p.copy].filter(Boolean).join("\n\n");
 }
 
+export const bloatProduct = (product: Product, targetWords: number) =>
+  post<{ bloated: string }>("/api/bloat", { product, targetWords });
+
 export async function streamSimulation(
   body: {
-    originalContent: string;
-    optimizedContent: string;
+    arms: Arm[];
     queries: string[];
     competitors: { title: string; content: string }[];
   },
