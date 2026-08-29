@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #07080b;
+  --surface: #0e1016;
+  --surface-2: #14171f;
+  --border: #232733;
+  --foreground: #e8eaf0;
+  --muted: #8b93a7;
+  --accent: #6ee7a8;
+  --accent-dim: #1f6f4a;
+  --warn: #f5c26b;
+  --bad: #f08a8a;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
+
+*::selection { background: var(--accent-dim); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.hairline { border-color: var(--border); }
+
+textarea, input {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  width: 100%;
+  font-size: 0.875rem;
+  outline: none;
+}
+textarea:focus, input:focus { border-color: var(--accent-dim); }
+textarea { resize: vertical; font-family: var(--font-geist-mono), monospace; }
+
+@keyframes fadeup {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.fadeup { animation: fadeup 0.35s ease both; }
