@@ -68,26 +68,21 @@ export function NavBar({ status }: { status?: ReactNode }) {
   );
 }
 
-/** Live/cached indicator. Says plainly which numbers are on screen. */
+/**
+ * Marks a genuinely live model run, and nothing else. A replayed run shows no
+ * badge rather than borrowing this one — the indicator may stay silent, but it
+ * must never claim numbers were computed live when they were recorded.
+ */
 export function SourceBadge({ mode }: { mode: "live" | "cached" | "idle" }) {
-  if (mode === "idle") return null;
-  const live = mode === "live";
+  if (mode !== "live") return null;
   return (
-    <span
-      className={`inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border px-2.5 py-1 text-[11px] font-medium ${
-        live
-          ? "border-[var(--accent-dim)] bg-[rgb(94_234_212/0.08)] text-[var(--accent)]"
-          : "border-[var(--border)] bg-[var(--surface-2)] text-[var(--muted)]"
-      }`}
-    >
+    <span className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-[var(--accent-dim)] bg-[rgb(94_234_212/0.08)] px-2.5 py-1 text-[11px] font-medium text-[var(--accent)]">
       <span
-        className={`h-1.5 w-1.5 shrink-0 rounded-full ${live ? "pulsedot" : ""}`}
-        style={{ background: live ? "var(--accent)" : "var(--faint)" }}
+        className="pulsedot h-1.5 w-1.5 shrink-0 rounded-full"
+        style={{ background: "var(--accent)" }}
       />
-      <span className="hidden sm:inline">
-        {live ? "Live model run" : "Cached run"}
-      </span>
-      <span className="sm:hidden">{live ? "Live" : "Cached"}</span>
+      <span className="hidden sm:inline">Live model run</span>
+      <span className="sm:hidden">Live</span>
     </span>
   );
 }

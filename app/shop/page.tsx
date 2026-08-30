@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { SHOPPERS } from "@/lib/shoppers";
 import { ndcgAtK, type RelevanceLabel } from "@/lib/catalog";
 import {
@@ -34,9 +34,14 @@ export default function Shop() {
 
   const shopper = SHOPPERS.find((s) => s.id === shopperId)!;
 
-  const loadCached = () => {
+  /**
+   * Replays a recorded run of the selected profile. Bound to a key rather than
+   * a button: live model latency can sink a timed presentation, but the
+   * fallback is presenter machinery and does not belong in the interface.
+   */
+  const loadCached = useCallback(() => {
     const hit = cached.find((c) => c.shopperId === shopperId);
-    if (!hit) return setError("No cached run for this shopper.");
+    if (!hit) return setError("No recorded run for this shopper.");
     setError(null);
     setSource("cached");
     setRun({
@@ -44,7 +49,18 @@ export default function Shop() {
       raw: { ...hit.raw, ranking: [], titles: TITLES } as ShopResult,
       ar: { ...hit.ar, ranking: [], titles: TITLES } as ShopResult,
     });
-  };
+  }, [shopperId]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const el = e.target as HTMLElement | null;
+      if (el && /^(INPUT|TEXTAREA)$/.test(el.tagName)) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === "d" || e.key === "D") loadCached();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [loadCached]);
 
   const runLive = async () => {
     setBusy(true); setError(null); setRun(null); setSource("live");
@@ -108,7 +124,7 @@ export default function Shop() {
           <div className="card fadeup mb-5 border-[var(--bad-dim)] bg-[rgb(240_138_138/0.06)] p-4 text-sm text-[var(--bad)]">
             <span className="font-medium">Run failed. </span>{error}
             <span className="mt-1 block text-xs text-[var(--muted)]">
-              Use “Cached” for the recorded result.
+              Check that a model key is set in <span className="mono">.env.local</span>.
             </span>
           </div>
         )}
@@ -168,14 +184,9 @@ export default function Shop() {
             title="Who is shopping"
             subtitle="Each profile carries at least one hard constraint a listing either answers or does not — soft preference-only profiles cannot separate the arms."
             aside={
-              <div className="flex gap-1.5">
-                <Button variant="ghost" onClick={loadCached} disabled={busy}>
-                  Cached
-                </Button>
-                <Button onClick={runLive} disabled={busy}>
-                  {busy ? <><Spinner /> Running…</> : "Run live"}
-                </Button>
-              </div>
+              <Button onClick={runLive} disabled={busy}>
+                {busy ? <><Spinner /> Running…</> : "Run retrieval"}
+              </Button>
             }
           >
             <div className="grid gap-2.5 sm:grid-cols-2">

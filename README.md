@@ -34,12 +34,16 @@ npm run dev
 
 Open http://localhost:3000.
 
-- **`Load cached run`** — or just press <kbd>D</kbd> — replays a real
-  end-to-end result with zero network calls. Use this when demoing; API latency
-  is the one thing that can sink a timed presentation.
-- **`Run all four stages`** chains score → optimize → control → ablation in one
+- **`Run the pipeline`** chains score → optimize → control → ablation in one
   click, streaming each of the 36 agent decisions into the UI as it lands.
+  Individual stages can also be run one at a time.
 - **`Shopper mode`** in the top nav is the consumer-facing benchmark.
+- **<kbd>D</kbd>** replays a recorded end-to-end run of the current page with
+  zero network calls — the fallback for when live API latency would sink a
+  timed presentation. It is a keyboard shortcut rather than a button so the
+  interface shows the product, not the presenter's machinery; the "live model
+  run" indicator is never shown over a replay. Wait for the page to hydrate
+  before pressing it.
 
 Provider is auto-detected: `AI_GATEWAY_API_KEY` wins if present (Vercel AI
 Gateway, any model by string id), otherwise `OPENAI_API_KEY` is used directly.

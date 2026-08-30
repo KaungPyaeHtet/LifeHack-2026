@@ -216,7 +216,6 @@ export default function Home() {
 
       <main className="mx-auto w-full max-w-6xl flex-1 px-5 pb-16">
         <Hero
-          onDemo={loadDemo}
           onRunAll={runAll}
           busy={busy}
           chained={chained}
@@ -229,8 +228,7 @@ export default function Home() {
             <span className="font-medium">Run failed. </span>
             {error}
             <span className="mt-1 block text-xs text-[var(--muted)]">
-              Press <kbd className="mono rounded border border-[var(--border)] px-1">D</kbd>{" "}
-              or hit “Load cached run” to show the recorded result instead.
+              Check that a model key is set in <span className="mono">.env.local</span>.
             </span>
           </div>
         )}
@@ -627,9 +625,8 @@ const RAIL = [
 ];
 
 function Hero({
-  onDemo, onRunAll, busy, chained, busyLabel, states,
+  onRunAll, busy, chained, busyLabel, states,
 }: {
-  onDemo: () => void;
   onRunAll: () => void;
   busy: Stage;
   chained: boolean;
@@ -664,17 +661,12 @@ function Hero({
       </p>
 
       <div className="mt-7 flex flex-wrap items-center gap-2.5">
-        <Button onClick={onDemo}>
-          Load cached run
-          <kbd className="mono ml-1 rounded border border-[#0a3b32]/40 bg-[#03211c]/15 px-1 text-[10px]">
-            D
-          </kbd>
-        </Button>
-        <Button variant="ghost" onClick={onRunAll} disabled={busy !== null}>
-          {chained && busy ? <><Spinner /> {busyLabel}</> : "Run live pipeline"}
+        <Button onClick={onRunAll} disabled={busy !== null}>
+          {chained && busy ? <><Spinner /> {busyLabel}</> : "Run the pipeline"}
         </Button>
         <span className="text-xs text-[var(--faint)]">
-          Cached replays a real end-to-end run with zero network calls.
+          Scores the listing, rewrites it, then makes both versions compete for
+          the same shoppers.
         </span>
       </div>
 
