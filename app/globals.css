@@ -1,25 +1,50 @@
 @import "tailwindcss";
 
+/* ===========================================================================
+   AgentRank design tokens.
+
+   The visual language is "instrument panel": a near-black bench, hairline
+   rules, tabular numerals, and exactly three semantic colours that never mean
+   anything else — mint = agent-ready, amber = the original baseline, red =
+   the control arm / regression. Colour is data here, not decoration, so no
+   component is allowed to introduce a fourth hue.
+   ======================================================================== */
+
 :root {
-  --background: #07080b;
-  --surface: #0e1016;
-  --surface-2: #14171f;
-  --border: #232733;
-  --foreground: #e8eaf0;
-  --muted: #8b93a7;
-  --accent: #6ee7a8;
-  --accent-dim: #1f6f4a;
+  --background: #06070a;
+  --surface: #0d0f15;
+  --surface-2: #12151d;
+  --surface-3: #171b25;
+  --border: #212633;
+  --border-strong: #2f3646;
+  --foreground: #e9ecf3;
+  --muted: #8a93a8;
+  --faint: #5c6479;
+
+  --accent: #5eead4;
+  --accent-2: #6ee7a8;
+  --accent-dim: #1c5f52;
+  --accent-glow: rgb(94 234 212 / 0.16);
+
   --warn: #f5c26b;
+  --warn-dim: #5c4520;
   --bad: #f08a8a;
+  --bad-dim: #5a2b2b;
+
+  --radius: 0.875rem;
+  --shadow-card: 0 1px 0 0 rgb(255 255 255 / 0.03) inset,
+                 0 24px 48px -32px rgb(0 0 0 / 0.9);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
   --color-border: var(--border);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
+  --color-faint: var(--faint);
   --color-accent: var(--accent);
   --color-warn: var(--warn);
   --color-bad: var(--bad);
@@ -27,21 +52,80 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* ------------------------------------------------------------------ base */
+
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-*::selection { background: var(--accent-dim); }
+/* Two fixed wash layers: a slow mint aurora and a 40px engineering grid that
+   fades out below the fold. Fixed rather than scrolled so the page reads as
+   content moving across a bench, not a background sliding past. */
+.bench::before,
+.bench::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.bench::before {
+  background:
+    radial-gradient(60rem 40rem at 12% -10%, rgb(94 234 212 / 0.09), transparent 60%),
+    radial-gradient(50rem 34rem at 92% 4%, rgb(110 231 168 / 0.06), transparent 62%),
+    radial-gradient(46rem 40rem at 50% 108%, rgb(245 194 107 / 0.045), transparent 65%);
+}
+.bench::after {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.028) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.028) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 78%);
+}
+
+::selection { background: var(--accent-dim); color: #eafff9; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border: 3px solid var(--background);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--faint); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------------------- surfaces */
 
 .card {
-  background: var(--surface);
+  position: relative;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.022), transparent 120px),
+    var(--surface);
   border: 1px solid var(--border);
-  border-radius: 0.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.inset {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0.625rem;
 }
 
 .hairline { border-color: var(--border); }
+
+/* ----------------------------------------------------------------- inputs */
 
 textarea, input {
   background: var(--surface-2);
@@ -50,13 +134,79 @@ textarea, input {
   padding: 0.6rem 0.75rem;
   width: 100%;
   font-size: 0.875rem;
+  color: var(--foreground);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+textarea::placeholder, input::placeholder { color: var(--faint); }
+textarea:focus, input:focus {
+  border-color: var(--accent-dim);
+  background: var(--surface-3);
+  box-shadow: 0 0 0 3px var(--accent-glow);
   outline: none;
 }
-textarea:focus, input:focus { border-color: var(--accent-dim); }
-textarea { resize: vertical; font-family: var(--font-geist-mono), monospace; }
+textarea { resize: vertical; font-family: var(--font-geist-mono), monospace; line-height: 1.6; }
+
+/* ------------------------------------------------------------- animation */
 
 @keyframes fadeup {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: none; }
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
 }
-.fadeup { animation: fadeup 0.35s ease both; }
+.fadeup { animation: fadeup 0.45s cubic-bezier(.2,.7,.3,1) both; }
+
+@keyframes slidein {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+.slidein { animation: slidein 0.3s ease both; }
+
+@keyframes pulsedot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.35; transform: scale(0.82); }
+}
+.pulsedot { animation: pulsedot 1.4s ease-in-out infinite; }
+
+/* A light sweeping across a track — used only while a stage is genuinely
+   running, so motion on screen always means work in flight. */
+@keyframes sweep {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(320%); }
+}
+.sweep::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 32%;
+  background: linear-gradient(90deg, transparent, rgb(94 234 212 / 0.55), transparent);
+  animation: sweep 1.5s ease-in-out infinite;
+}
+
+@keyframes glowpulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  50%      { box-shadow: 0 0 0 7px transparent; }
+}
+.glowpulse { animation: glowpulse 2s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------ typography */
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+.mono { font-family: var(--font-geist-mono), ui-monospace, monospace; }

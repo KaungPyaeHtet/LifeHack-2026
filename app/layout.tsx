@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,10 +12,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const TAGLINE =
+  "Your product ranks #1 on Google. Where does it rank with an agent?";
+
 export const metadata: Metadata = {
-  title: "AgentRank",
-  description:
-    "Your product ranks #1 on Google. Where does it rank with an agent?",
+  title: {
+    default: "AgentRank — agent readiness for product content",
+    template: "%s · AgentRank",
+  },
+  description: TAGLINE,
+  applicationName: "AgentRank",
+  openGraph: {
+    title: "AgentRank",
+    description: TAGLINE,
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "AgentRank", description: TAGLINE },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#06070a",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -24,7 +41,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="bench min-h-full flex flex-col">
+        <div className="relative z-10 flex min-h-full flex-1 flex-col">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

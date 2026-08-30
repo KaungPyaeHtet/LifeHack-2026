@@ -69,7 +69,11 @@ export const rankingSchema = z.object({
   reasoning: z
     .string()
     .describe("Two sentences on why the pick won and the runner-up lost."),
-  confidence: z.number().min(0).max(100),
+  confidence: z
+    .number()
+    .min(0)
+    .max(100)
+    .describe("How confident you are in the pick, as a whole number from 0 to 100."),
 });
 export type RankingResult = z.infer<typeof rankingSchema>;
 
